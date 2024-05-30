@@ -7,6 +7,7 @@ module.exports = {
       return config;
       // implement node event listeners here
     },
+    experimentalStudio: true,
   },
 };
 

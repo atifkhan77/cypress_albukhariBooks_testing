@@ -1,11 +1,15 @@
 describe('Testing Albukhari books', () => {
+  before(() => {
+    // Any setup needed before the entire test suite runs
+    // e.g., setting up environment variables, initializing data, etc.
+  });
+
   beforeEach(() => {
     const baseUrl = Cypress.env('BASE_URL')
-    if(!baseUrl){
-      throw new Error('BASE_URL enviornmental variab;le is not defined')
+    if (!baseUrl) {
+      throw new Error('BASE_URL environmental variable is not defined')
     }
-    cy.visit(baseUrl,{ failOnStatusCode: false })
-    
+    cy.visit(baseUrl, { failOnStatusCode: false })
   });
 
   const signUpData = [
@@ -39,7 +43,7 @@ describe('Testing Albukhari books', () => {
       cy.get('#signonemail').click().type(data.email);
       cy.get('#signonpassword').click().type(data.password);
       cy.get('#password2').click().type(data.confirmPassword);
-      cy.screenshot('before signup')
+      cy.screenshot('before signup');
       cy.get('#custom-register > .submit_button').contains('REGISTER').should('be.visible').click();
       cy.screenshot('after signup');
       cy.wait(3000);
@@ -70,7 +74,7 @@ describe('Testing Albukhari books', () => {
   });
 
   // Example of API testing for user sign up
-  
+  // Add API tests here if necessary
 
   // Handle uncaught exceptions
   Cypress.on('uncaught:exception', (err, runnable) => {
