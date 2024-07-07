@@ -1,6 +1,10 @@
 {
   "devDependencies": {
     "cypress": "^13.10.0",
+    "mocha": "^10.6.0"
+  },
+  "dependencies": {
+    "@applitools/eyes-cypress": "^3.23.9",
     "cypress-image-snapshot": "^4.0.1"
   }
 }
