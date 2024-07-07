@@ -4,7 +4,7 @@ module.exports = {
     
     setupNodeEvents(on, config) {
       config.env.BASE_URL = 'https://bukharibooks.com/';
-      return config;
+   
       // implement node event listeners here
     },
     experimentalStudio: true,
